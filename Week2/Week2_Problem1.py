@@ -5,12 +5,10 @@ def monthlyBalance(balance, annualInterestRate, monthlyPaymentRate):
     updatedBalanceEachMonth = monthlyUnpaidBalance + (monthlyInterestRate * monthlyUnpaidBalance)
     return updatedBalanceEachMonth
 
-balance = 484
+balance = 42
 annualInterestRate = 0.2
 monthlyPaymentRate = 0.04
-numberOfMonths = 12
 
-while numberOfMonths > 0:
+for month in range(1, 13):
     balance = monthlyBalance(balance, annualInterestRate, monthlyPaymentRate)
-    numberOfMonths -= 1
-    print ("Month " + str(numberOfMonths) + " Remaining balance: " + str(round(balance, 2)))
+    print ("Month " + str(month) + " Remaining balance: " + str(round(balance, 2)))
