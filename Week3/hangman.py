@@ -89,7 +89,7 @@ def getAvailableLetters(lettersGuessed):
     availableLetter = ''
     for letter in string.ascii_lowercase:
         if letter not in lettersGuessed:
-            availableLetter += letter
+            availableLetter += letter + ' '
     return availableLetter
 
 
