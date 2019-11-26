@@ -1,8 +1,5 @@
-from ps4a import *
+from Week4.ps4a import *
 import time
-
-
-#
 #
 # Computer chooses a word
 #
@@ -124,8 +121,37 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    def computerOrUser():
+        while True:
+            computer_or_user = input("Enter u to have yourself play, c to have the computer play: ")
+            if computer_or_user == 'u':
+                playHand(hand, wordList, n)
+                break
+            elif computer_or_user == 'c':
+                compPlayHand(hand, wordList, n)
+                break
+            else:
+                print("Invalid command.")
+                print()
+
+    n = HAND_SIZE
+    user_choice = ''
+    hand = {}
+    while user_choice != "e":
+        user_choice = input("Enter n to deal a new hand, r to replay the last hand, or e to end game: ")
+        if user_choice == "e":
+            break
+        elif user_choice == "n":
+            hand = dealHand(n)
+            computerOrUser()
+        elif user_choice == "r":
+            if hand == {}:
+                print("You have not played a hand yet. Please play a new hand first!")
+            else:
+                computerOrUser()
+        else:
+            print("Invalid commands.")
+
 
         
 #
