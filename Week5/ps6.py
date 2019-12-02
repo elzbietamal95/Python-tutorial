@@ -1,5 +1,7 @@
 import string
 
+file_name = "story.txt"
+
 ### DO NOT MODIFY THIS FUNCTION ###
 def load_words(file_name):
     '''
@@ -238,10 +240,12 @@ class CiphertextMessage(Message):
                 best_shift = shift
         return (best_shift, self.apply_shift(best_shift))
 
-    def decrypt_story():
-        encrypted_story = get_story_string()
-        decrypted_story = CiphertextMessage(encrypted_story)
-        return decrypted_story.decrypt_message()
+def decrypt_story():
+    encrypted_story = get_story_string()
+    decrypted_story = CiphertextMessage(encrypted_story)
+    return decrypted_story.decrypt_message()
+
+print(decrypt_story())
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
