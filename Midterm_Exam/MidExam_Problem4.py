@@ -42,7 +42,22 @@ def trian(k):
         trian_nums.append(num)
     print(trian_nums)
 
+def is_triangular2(k):
+    """
+    k, a positive integer
+    returns True if k is triangular and False if not
+    """
+    i = 1
+    triangular_number = 0
+    while triangular_number < k:
+        triangular_number += i
+        i += 1
+    if triangular_number == k:
+        return True
+    return False
+
 
 triangular(7)
 trian(7)
 print(is_triangular(10))
+print(is_triangular2(21))
