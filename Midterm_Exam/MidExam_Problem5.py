@@ -1,5 +1,5 @@
 def print_without_vowels(s):
-    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
     removed = s
     for letter in s:
         if letter in vowels:
